@@ -12,7 +12,7 @@ class ImageActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val mRecyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-        val adapter = CustomAdapter(imageList(resources))
+        val adapter = CustomAdapter(imageList())
             mRecyclerView.adapter = adapter
         mRecyclerView.layoutManager = GridLayoutManager(this, 2)
 //         val numOfColumns = 2;
