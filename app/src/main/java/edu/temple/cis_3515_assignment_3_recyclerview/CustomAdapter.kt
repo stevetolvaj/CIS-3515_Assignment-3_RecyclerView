@@ -8,7 +8,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import edu.temple.cis_3515_assignment_3_recyclerview.CustomAdapter.ViewHolder
 
-class CustomAdapter(private val dataSet: List<ImageObject>) : RecyclerView.Adapter<ViewHolder>() {
+class CustomAdapter(private val dataSet: List<ImageObject>) : RecyclerView.Adapter<ViewHolder>(), View.OnClickListener {
+    
 
     class ViewHolder(_itemView: View) : RecyclerView.ViewHolder(_itemView) {
         val imageView : ImageView = _itemView.findViewById(R.id.imageViewLayout)
@@ -19,10 +20,14 @@ class CustomAdapter(private val dataSet: List<ImageObject>) : RecyclerView.Adapt
         return ViewHolder(view)
     }
 
+    override fun onClick(v: View?) {
+
+    }
+
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.imageView.setImageResource(dataSet[position].resourceId)
     }
 
-    override fun getItemCount() = 3
+    override fun getItemCount() = 12
 
 }
