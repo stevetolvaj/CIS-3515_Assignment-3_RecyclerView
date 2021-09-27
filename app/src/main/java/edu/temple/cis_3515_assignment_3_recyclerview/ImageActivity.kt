@@ -13,7 +13,7 @@ class ImageActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val mRecyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-        val adapter = CustomAdapter(imageList())
+        val adapter = CustomAdapter(imageList(), this)
         mRecyclerView.adapter = adapter
         mRecyclerView.layoutManager = GridLayoutManager(this, 2)
 

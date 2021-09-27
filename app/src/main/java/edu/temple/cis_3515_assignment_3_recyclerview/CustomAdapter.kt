@@ -1,5 +1,6 @@
 package edu.temple.cis_3515_assignment_3_recyclerview
 
+import android.app.Activity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,8 +9,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import edu.temple.cis_3515_assignment_3_recyclerview.CustomAdapter.ViewHolder
 
-class CustomAdapter(private val dataSet: List<ImageObject>) : RecyclerView.Adapter<ViewHolder>(), View.OnClickListener {
-    
+class CustomAdapter(private val dataSet: List<ImageObject>, activity: Activity) : RecyclerView.Adapter<ViewHolder>() {
+    var imageView: ImageView = activity.findViewById(R.id.imageView)
+    var textView: TextView = activity.findViewById(R.id.titleTextView)
 
     class ViewHolder(_itemView: View) : RecyclerView.ViewHolder(_itemView) {
         val imageView : ImageView = _itemView.findViewById(R.id.imageViewLayout)
@@ -20,12 +22,14 @@ class CustomAdapter(private val dataSet: List<ImageObject>) : RecyclerView.Adapt
         return ViewHolder(view)
     }
 
-    override fun onClick(v: View?) {
-
-    }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.imageView.setImageResource(dataSet[position].resourceId)
+
+        holder.imageView.setOnClickListener{
+            imageView.setImageResource(dataSet[position].resourceId)
+            textView.text = dataSet[position].title
+        }
     }
 
     override fun getItemCount() = 12
