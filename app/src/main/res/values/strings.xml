@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">CIS-3515_Assignment-3_RecyclerView</string>
     <string name="image_selected_above">Image selected above</string>
+    <string name="details_of_image_selected">Details of image selected</string>
 </resources>
