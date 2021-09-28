@@ -2,8 +2,6 @@ package edu.temple.cis_3515_assignment_3_recyclerview
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.MediaStore
-import android.widget.ImageView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -13,7 +11,7 @@ class ImageActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val mRecyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-        val adapter = CustomAdapter(imageList(), this)
+        val adapter = ImageAdapter(imageList(), this)
         mRecyclerView.adapter = adapter
         mRecyclerView.layoutManager = GridLayoutManager(this, 2)
 

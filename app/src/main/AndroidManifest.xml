@@ -12,6 +12,7 @@
         android:theme="@style/Theme.CIS3515_Assignment3_RecyclerView">
         <activity
             android:name=".ImageActivity"
+            android:label="Choose Your Cat"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

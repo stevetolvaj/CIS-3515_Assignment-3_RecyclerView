@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import edu.temple.cis_3515_assignment_3_recyclerview.CustomAdapter.ViewHolder
+import edu.temple.cis_3515_assignment_3_recyclerview.ImageAdapter.ViewHolder
 
-class CustomAdapter(private val dataSet: List<ImageObject>, activity: Activity) : RecyclerView.Adapter<ViewHolder>() {
+class ImageAdapter(private val dataSet: List<ImageObject>, activity: Activity) : RecyclerView.Adapter<ViewHolder>() {
     var imageView: ImageView = activity.findViewById(R.id.imageView)
     var textView: TextView = activity.findViewById(R.id.titleTextView)
 
