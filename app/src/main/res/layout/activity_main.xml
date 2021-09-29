@@ -10,7 +10,7 @@
         android:id="@+id/titleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="@string/meowing_cat"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -31,11 +31,12 @@
         android:layout_width="381dp"
         android:layout_height="330dp"
         android:contentDescription="@string/image_selected_above"
+        android:src="@drawable/meowing_cat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recyclerView"
         app:layout_constraintVertical_bias="1.0"
-        tools:src="@tools:sample/avatars" />
+        tools:src="@drawable/meowing_cat" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

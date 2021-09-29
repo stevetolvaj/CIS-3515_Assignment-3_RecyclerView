@@ -1,7 +1,5 @@
 package edu.temple.cis_3515_assignment_3_recyclerview
 
-import android.content.res.Resources
-
 fun imageList(): List<ImageObject> {
     return listOf(
         ImageObject(
