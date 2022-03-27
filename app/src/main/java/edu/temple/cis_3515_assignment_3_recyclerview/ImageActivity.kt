@@ -22,6 +22,7 @@ class ImageActivity : AppCompatActivity() {
                 position -> onItemClicked(position)
         }
 
+
         mRecyclerView.adapter = adapter
         mRecyclerView.layoutManager = GridLayoutManager(this, 3)
 

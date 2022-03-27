@@ -7,19 +7,21 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import edu.temple.cis_3515_assignment_3_recyclerview.ImageAdapter.ViewHolder
 
+// Could have passed ocl: View.OnClickListener instead of lambda.
+
 
 class ImageAdapter(private val dataSet: List<ImageObject>, private val onItemClicked: (position: Int) -> Unit) : RecyclerView.Adapter<ViewHolder>() {
 
 
     class ViewHolder(_itemView: View, private val onItemClicked: (position: Int) -> Unit) : RecyclerView.ViewHolder(_itemView), View.OnClickListener {
         val imageView : ImageView = _itemView.findViewById(R.id.imageViewLayout)
-
+        // could have used imageview.apply{set_viewOnClickListener(ocl)} apply is specific to kotlin.
         init {
             _itemView.setOnClickListener(this)
         }
         override fun onClick(v: View?) {
             val position = adapterPosition
-            onItemClicked(position)
+            onItemClicked(position)     
         }
 
     }
