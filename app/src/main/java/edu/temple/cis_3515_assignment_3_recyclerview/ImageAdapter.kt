@@ -9,7 +9,7 @@ import edu.temple.cis_3515_assignment_3_recyclerview.ImageAdapter.ViewHolder
 
 // Could have passed ocl: View.OnClickListener instead of lambda.
 
-
+// Test 2
 class ImageAdapter(private val dataSet: List<ImageObject>, private val onItemClicked: (position: Int) -> Unit) : RecyclerView.Adapter<ViewHolder>() {
 
 
